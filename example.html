@@ -3,8 +3,8 @@
 
 <div id=yourDiv></div>
 <script>
-var yourDiv = document.getElementById("yourDiv");
-var biojspcviz = require('biojs-pcviz');
-var result = biojspcviz.hello('biojs');
-yourDiv.textContent = result;
+	var yourDiv = document.getElementById("yourDiv");
+	var biojspcviz = require('biojs-pcviz');
+	var iframe = biojspcviz.pathsbetween({ baseurl: "http://blalaldasdasd.asdsd/", query: "BRCA2,BRCA1" });
+	yourDiv.appendChild(iframe);
 </script>
