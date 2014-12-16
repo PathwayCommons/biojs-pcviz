@@ -1,0 +1,10 @@
+<meta charset="utf-8">
+<script src="build/biojspcviz.js"></script>
+
+<div id=yourDiv></div>
+<script>
+var yourDiv = document.getElementById("yourDiv");
+var biojspcviz = require('biojs-pcviz');
+var result = biojspcviz.hello('biojs');
+yourDiv.textContent = result;
+</script>
