@@ -5,6 +5,14 @@
 
 > BioJS component for PCViz embedded widget
 
+## About
+PCViz is a web-based binary interaction visualizer that pulls in data from [Pathway Commons](http://www.pathwaycommons.org/about):
+
+	http://www.pathwaycommons.org/pcviz/
+
+PCViz has an embedded widget option that can be used by other developers to easily show network on their web sites.
+This module wraps this functionality around BioJS framework for better and easier integration by developers.
+
 ## Getting Started
 Install the module with: `npm install biojs-pcviz`
 
@@ -41,6 +49,7 @@ var opts = {
 	// Callback function to be called if network doesn't get loaded in timeout miliseconds.
 	onFail: function() {}
 }
+```
 
 ## Documentation
 
