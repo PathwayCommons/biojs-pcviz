@@ -5,6 +5,13 @@
 <script>
 	var yourDiv = document.getElementById("yourDiv");
 	var biojspcviz = require('biojs-pcviz');
-	var iframe = biojspcviz.pathsbetween({ baseurl: "http://blalaldasdasd.asdsd/", query: "BRCA2,BRCA1" });
-	yourDiv.appendChild(iframe);
+	var iframe = biojspcviz.neighborhood(
+	{ 
+		el: yourDiv, 
+		query: "MDM2",
+		onLoad: function(msg) { console.dir(msg); },
+		onNodeClick: function(msg) { console.dir(msg); },
+		onEdgeClick: function(msg) { console.dir(msg); },
+		onFail: function() { console.log("Failed!.."); }
+	});
 </script>

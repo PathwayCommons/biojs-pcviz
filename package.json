@@ -32,6 +32,7 @@
     "sniper": "biojs-sniper ."
   },
   "dependencies": {
+    "json3": "^3.3.2",
     "underscore": "^1.7.0"
   },
   "devDependencies": {

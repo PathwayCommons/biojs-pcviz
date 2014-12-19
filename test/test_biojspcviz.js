@@ -3,7 +3,7 @@
  * https://github.com/armish/biojs-pcviz
  *
  * Copyright (c) 2014 B. Arman Aksoy
- * Licensed under the Apache 2 license.
+ * Licensed under the LGPL 3.0 license.
  */
 
 // chai is an assertion library
@@ -21,13 +21,11 @@ chai.should();
 var biojspcviz = require('../');
 
 describe('biojs-pcviz module', function(){
-  describe('#hello()', function(){
-    it('should return a hello', function(){
-
-      assert.equal(biojspcviz.hello('biojs'), ("hello biojs"));
-      
-      // alternative styles
-      biojspcviz.hello('biojs').should.equal("hello biojs");
-    });
+  describe('#trivialTests()', function(){
+  	var opts = { query: "MDM2, MDM4" };
+  	chai.expect(biojspcviz).not.to.be.null();
+  	
+  	//chai.expect(biojspcviz.neighborhood(opts)).not.to.be.null();
+	//chai.expect(biojspcviz.pathsbetween(opts)).not.to.be.null();
   });
 });

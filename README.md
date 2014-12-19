@@ -10,23 +10,68 @@ Install the module with: `npm install biojs-pcviz`
 
 ```javascript
 var biojspcviz = require('biojs-pcviz');
-biojspcviz.hello("biojs"); // "hello biojs"
+// Visualizes neighborhood of "BRCA1" gene in a div
+biojspcviz.neighborhood({ el: '#yourDivId', query: "BRCA1"}); 
 ```
+
+## Default Options
+
+```javascript
+var opts = {
+	// Target HTML element
+	el: document.createElement("div"),
+	// Base URL for the target PCViz instance
+	baseurl: "http://www.pathwaycommons.org/pcviz/",
+	// Width of the iframe
+	width: "100%",
+	// Height of the iframe
+	height: "100%",
+	// Query gene(s); delimited by comma (",") if more than one
+	query: "MDM2",
+	// If PCViz doesn't get loaded in this time, onFail will be called
+	timeout: 20 * 1000,
+	// Callback function for network load event
+	onLoad: function(msg) {},
+	// Callback function for node clicks; msg contains information about the node
+	onNodeClick: function(msg) {},
+	// Callback function for edge clicks; msg contains information about the edge
+	onEdgeClick: function(msg) {},
+	// Callback function for background clicks; msg containts no information
+	onBackgroundClick: function(msg) {},
+	// Callback function to be called if network doesn't get loaded in timeout miliseconds.
+	onFail: function() {}
+}
 
 ## Documentation
 
-#### .hello(name)
+#### .neighboorhood(opts)
 
-**Parameter**: `name`
-**Type**: `String`
-**Example**: `biojs`
+**Parameter**: `opts`
+**Type**: `Object`
+**Example**: `{el: ..., query: ...}`
 
-The 'hello' method is responsible for showing a name.
+Visualizes the neighborhood of all `query` genes.
 
-How to use this method
-
+Example:
 ```javascript
-biojspcviz.hello('biojs'); // "hello biojs"
+// Loads neighborhood of BRCA2
+biojspcviz.neighborhood({ el: thatEl, query: "BRCA2"});
+```
+
+
+#### .pathsbetween(opts)
+
+**Parameter**: `opts`
+**Type**: `Object`
+**Example**: `{el: ..., query: ...}`
+
+Queries the path between two or more genes.
+Returns a less dense network compared to `neighborhood`.
+
+Example:
+```javascript
+// Loads neighborhood of BRCA2
+biojspcviz.neighborhood({ el: thatEl, query: "TP53,MDM2"});
 ```
 
 ## Contributing
@@ -37,20 +82,8 @@ Please submit all issues and pull requests to the [armish/biojs-pcviz](http://gi
 If you have any problem or suggestion please open an issue [here](https://github.com/armish/biojs-pcviz/issues).
 
 ## License 
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.
 
-This software is licensed under the Apache 2 license, quoted below.
-
-Copyright (c) 2014, B. Arman Aksoy
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not
-use this file except in compliance with the License. You may obtain a copy of
-the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
-License for the specific language governing permissions and limitations under
-the License.
+You should have received a copy of the GNU Lesser General Public License along with this program. If not, see http://www.gnu.org/licenses/.
