@@ -6,15 +6,23 @@
 > BioJS component for PCViz embedded widget
 
 ## About
-[PCViz](http://www.pathwaycommons.org/pcviz/) is a web-based binary interaction visualizer that pulls in data from [Pathway Commons](http://www.pathwaycommons.org/about): http://www.pathwaycommons.org/pcviz/
-
+[PCViz](http://www.pathwaycommons.org/pcviz/) is a web-based binary interaction visualizer that pulls in data from [Pathway Commons](http://www.pathwaycommons.org/about).
 PCViz has an embedded widget option that can be used by other developers to easily show network on their web sites.
 This module wraps this functionality around BioJS framework for better and easier integration by developers.
 
 ![PCViz Embedded Widget Screenshot](pcviz-screenshot.png)
 
+*PCViz Homepage*: http://registry.biojs.net/#/detail/biojs-pcviz
+*PCViz on BioJS Registry*: http://registry.biojs.net/#/detail/biojs-pcviz
+
 ## Getting Started
 Install the module with: `npm install biojs-pcviz`
+
+or you can use the browser version from the latest build:
+
+https://github.com/armish/biojs-pcviz/tree/master/build
+
+The following code sample shows how to use this component in a simple way:
 
 ```javascript
 var biojspcviz = require('biojs-pcviz');
@@ -26,7 +34,9 @@ var pcviz = new biojspcviz();
 pcviz.neighborhood({ el: '#yourDivId', query: "BRCA1"}); 
 ```
 
-## Default Options
+## Documentation
+
+### Default Options for Queries
 
 ```javascript
 var opts = {
@@ -55,8 +65,6 @@ var opts = {
 }
 ```
 
-## Documentation
-
 #### .neighboorhood(opts)
 
 **Parameter**: `opts`
@@ -68,7 +76,7 @@ Visualizes the neighborhood of all `query` genes.
 Example:
 ```javascript
 // Loads neighborhood of BRCA2
-biojspcviz.neighborhood({ el: thatEl, query: "BRCA2"});
+pcviz.neighborhood({ el: thatEl, query: "BRCA2"});
 ```
 
 #### .pathsbetween(opts)
@@ -83,7 +91,7 @@ Returns a less dense network compared to `neighborhood`.
 Example:
 ```javascript
 // Loads neighborhood of BRCA2
-biojspcviz.neighborhood({ el: thatEl, query: "TP53,MDM2"});
+pcviz.neighborhood({ el: thatEl, query: "TP53,MDM2"});
 ```
 
 ## Contributing
