@@ -6,20 +6,24 @@
 > BioJS component for PCViz embedded widget
 
 ## About
-PCViz is a web-based binary interaction visualizer that pulls in data from [Pathway Commons](http://www.pathwaycommons.org/about):
-
-	http://www.pathwaycommons.org/pcviz/
+[PCViz](http://www.pathwaycommons.org/pcviz/) is a web-based binary interaction visualizer that pulls in data from [Pathway Commons](http://www.pathwaycommons.org/about): http://www.pathwaycommons.org/pcviz/
 
 PCViz has an embedded widget option that can be used by other developers to easily show network on their web sites.
 This module wraps this functionality around BioJS framework for better and easier integration by developers.
+
+![PCViz Embedded Widget Screenshot](pcviz-screenshot.png)
 
 ## Getting Started
 Install the module with: `npm install biojs-pcviz`
 
 ```javascript
 var biojspcviz = require('biojs-pcviz');
-// Visualizes neighborhood of "BRCA1" gene in a div
-biojspcviz.neighborhood({ el: '#yourDivId', query: "BRCA1"}); 
+
+// Create an instance of PCViz
+var pcviz = new biojspcviz();
+
+// Visualize the neighborhood of "BRCA1" gene in a div using this new instance
+pcviz.neighborhood({ el: '#yourDivId', query: "BRCA1"}); 
 ```
 
 ## Default Options
@@ -66,7 +70,6 @@ Example:
 // Loads neighborhood of BRCA2
 biojspcviz.neighborhood({ el: thatEl, query: "BRCA2"});
 ```
-
 
 #### .pathsbetween(opts)
 

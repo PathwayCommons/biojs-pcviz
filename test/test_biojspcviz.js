@@ -22,10 +22,6 @@ var biojspcviz = require('../');
 
 describe('biojs-pcviz module', function(){
   describe('#trivialTests()', function(){
-  	var opts = { query: "MDM2, MDM4" };
-  	chai.expect(biojspcviz).not.to.be.null();
-  	
-  	//chai.expect(biojspcviz.neighborhood(opts)).not.to.be.null();
-	//chai.expect(biojspcviz.pathsbetween(opts)).not.to.be.null();
+  	chai.expect(biojspcviz).not.to.be.null();  	
   });
 });
