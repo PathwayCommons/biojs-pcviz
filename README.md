@@ -12,8 +12,10 @@ This module wraps this functionality around BioJS framework for better and easie
 
 ![PCViz Embedded Widget Screenshot](pcviz-screenshot.png)
 
-*PCViz Homepage*: http://registry.biojs.net/#/detail/biojs-pcviz
-*PCViz on BioJS Registry*: http://registry.biojs.net/#/detail/biojs-pcviz
+Here some useful PCViz links:
+- *PCViz Homepage*: http://www.pathwaycommons.org/pcviz
+- *PCViz on BioJS Registry*: http://registry.biojs.net/#/detail/biojs-pcviz
+- *Pathway Commons*: http://www.pathwaycommons.org/about/
 
 ## Getting Started
 Install the module with: `npm install biojs-pcviz`
