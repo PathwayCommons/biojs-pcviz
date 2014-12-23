@@ -20,7 +20,12 @@ pcviz2.neighborhood(
 	el: yourDiv2, 
 	baseurl: "http://smnclkhr32o4u2p9ursdlkfdf/",
 	query: "TP53",
-	onFail: function() { console.log("Load failed..."); }
+	timeout: 3 * 1000,
+	onFail: function() { 
+		console.log("Failed as expected...");
+		this.el.innerHTML = "<b>Loading failed!</b>";
+		return this;
+	}
 });
 
 // This is how you can show the results of a pathsbetween query

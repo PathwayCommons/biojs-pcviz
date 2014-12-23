@@ -1,7 +1,7 @@
 {
   "name": "biojs-pcviz",
   "description": "BioJS wrapper for PCViz widget",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "homepage": "https://github.com/armish/biojs-pcviz",
   "author": {
     "name": "B. Arman Aksoy",
@@ -62,7 +62,7 @@
       "examples"
     ],
     "first": "simple",
-    "second": "multiple"
+    "second": "multiple-instance"
   },
   "keywords": [
     "biojs",
@@ -72,7 +72,6 @@
     "pathway commons",
     "pathway",
     "gene networks",
-    "neighborhood",
-    "biojs"
+    "neighborhood"
   ]
 }
