@@ -1,23 +1,23 @@
 {
   "name": "biojs-pcviz",
-  "description": "BioJS wrapper for PCViz widget",
-  "version": "0.2.3",
-  "homepage": "https://github.com/armish/biojs-pcviz",
+  "description": "BioJS wrapper for PCViz widget from Pathway Commons team",
+  "version": "0.2.4",
+  "homepage": "https://github.com/PathwayCommons/biojs-pcviz",
   "author": {
     "name": "B. Arman Aksoy",
     "email": "arman@aksoy.org"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/armish/biojs-pcviz.git"
+    "url": "git://github.com/PathwayCommons/biojs-pcviz.git"
   },
   "bugs": {
-    "url": "https://github.com/armish/biojs-pcviz/issues"
+    "url": "https://github.com/PathwayCommons/biojs-pcviz/issues"
   },
   "licenses": [
     {
-      "type": "Apache 2",
-      "url": "https://github.com/armish/biojs-pcviz/blob/master/LICENSE"
+      "type": "LGPL 3",
+      "url": "https://github.com/PathwayCommons/biojs-pcviz/blob/master/LICENSE"
     }
   ],
   "main": "lib/biojspcviz.js",

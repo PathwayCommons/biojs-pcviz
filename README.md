@@ -1,7 +1,7 @@
 # biojs-pcviz
 
 [![NPM version](http://img.shields.io/npm/v/biojs-pcviz.svg)](https://www.npmjs.org/package/biojs-pcviz) 
-[![Build Status](https://secure.travis-ci.org/armish/biojs-pcviz.png?branch=master)](http://travis-ci.org/armish/biojs-pcviz) 
+[![Build Status](https://secure.travis-ci.org/PathwayCommons/biojs-pcviz.png?branch=master)](http://travis-ci.org/PathwayCommons/biojs-pcviz) 
 
 > BioJS component for PCViz embedded widget
 
@@ -22,7 +22,7 @@ Install the module with: `npm install biojs-pcviz`
 
 or you can use the browser version from the latest build:
 
-https://github.com/armish/biojs-pcviz/tree/master/build
+https://github.com/PathwayCommons/biojs-pcviz/tree/master/build
 
 The following code sample shows how to use this component in a simple way:
 
@@ -35,6 +35,10 @@ var pcviz = new biojspcviz();
 // Visualize the neighborhood of "BRCA1" gene in a div using this new instance
 pcviz.neighborhood({ el: '#yourDivId', query: "BRCA1"}); 
 ```
+
+You can find more examples under the `examples` folder:
+
+https://github.com/PathwayCommons/biojs-pcviz/tree/master/examples
 
 ## Documentation
 
@@ -98,10 +102,10 @@ pcviz.neighborhood({ el: thatEl, query: "TP53,MDM2"});
 
 ## Contributing
 
-Please submit all issues and pull requests to the [armish/biojs-pcviz](http://github.com/armish/biojs-pcviz) repository!
+Please submit all issues and pull requests to the [PathwayCommons/biojs-pcviz](http://github.com/PathwayCommons/biojs-pcviz) repository!
 
 ## Support
-If you have any problem or suggestion please open an issue [here](https://github.com/armish/biojs-pcviz/issues).
+If you have any problem or suggestion please open an issue [here](https://github.com/PathwayCommons/biojs-pcviz/issues).
 
 ## License 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
