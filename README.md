@@ -96,8 +96,8 @@ Returns a less dense network compared to `neighborhood`.
 
 Example:
 ```javascript
-// Loads neighborhood of BRCA2
-pcviz.neighborhood({ el: thatEl, query: "TP53,MDM2"});
+// Loads paths between TP53,MDM2
+pcviz.pathsbetween({ el: thatEl, query: "TP53,MDM2"});
 ```
 
 ## Contributing
