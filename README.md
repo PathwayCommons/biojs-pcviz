@@ -46,28 +46,28 @@ https://github.com/PathwayCommons/biojs-pcviz/tree/master/examples
 
 ```javascript
 var opts = {
-	// Target HTML element
-	el: document.createElement("div"),
-	// Base URL for the target PCViz instance
-	baseurl: "http://www.pathwaycommons.org/pcviz/",
-	// Width of the iframe
-	width: "100%",
-	// Height of the iframe
-	height: "100%",
-	// Query gene(s); delimited by comma (",") if more than one
-	query: "MDM2",
-	// If PCViz doesn't get loaded in this time, onFail will be called
-	timeout: 20 * 1000,
-	// Callback function for network load event
-	onLoad: function(msg) {},
-	// Callback function for node clicks; msg contains information about the node
-	onNodeClick: function(msg) {},
-	// Callback function for edge clicks; msg contains information about the edge
-	onEdgeClick: function(msg) {},
-	// Callback function for background clicks; msg containts no information
-	onBackgroundClick: function(msg) {},
-	// Callback function to be called if network doesn't get loaded in timeout miliseconds.
-	onFail: function() {}
+  // Target HTML element
+  el: document.createElement("div"),
+  // Base URL for the target PCViz instance
+  baseurl: "http://www.pathwaycommons.org/pcviz/",
+  // Width of the iframe
+  width: "100%",
+  // Height of the iframe
+  height: "100%",
+  // Query gene(s); delimited by comma (",") if more than one
+  query: "MDM2",
+  // If PCViz doesn't get loaded in this time, onFail will be called
+  timeout: 20 * 1000,
+  // Callback function for network load event
+  onLoad: function(msg) {},
+  // Callback function for node clicks; msg contains information about the node
+  onNodeClick: function(msg) {},
+  // Callback function for edge clicks; msg contains information about the edge
+  onEdgeClick: function(msg) {},
+  // Callback function for background clicks; msg containts no information
+  onBackgroundClick: function(msg) {},
+  // Callback function to be called if network doesn't get loaded in timeout miliseconds.
+  onFail: function() {}
 }
 ```
 
