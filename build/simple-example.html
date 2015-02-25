@@ -1,0 +1,21 @@
+<html>
+ <body>
+     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+ 	<script type="text/javascript" src="biojspcviz.js"></script>
+ 	<script type="text/javascript">
+	 	$(document).ready(function() {
+			var biojspcviz = require('biojs-pcviz');
+
+			// Create an instance of PCViz
+			var pcviz = new biojspcviz();
+
+			// Visualize the neighborhood of "BRCA1" gene in a div using this new instance
+			pcviz.neighborhood({ el: document.getElementById('testDiv'), query: "BRCA1"});
+			console.log("Done.");
+	 	});
+ 	</script>
+
+ 	<h3>Test page</h3>
+ 	<div id="testDiv"></div>
+ </body>
+ </html>

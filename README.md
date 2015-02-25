@@ -31,9 +31,10 @@ var biojspcviz = require('biojs-pcviz');
 
 // Create an instance of PCViz
 var pcviz = new biojspcviz();
+var yourDiv = document.getElementById('yourDiv');
 
 // Visualize the neighborhood of "BRCA1" gene in a div using this new instance
-pcviz.neighborhood({ el: '#yourDivId', query: "BRCA1"}); 
+pcviz.neighborhood({ el: yourDiv, query: "BRCA1"}); 
 ```
 
 You can find more examples under the `examples` folder:
