@@ -64,9 +64,7 @@ gulp.task('test', ['test-unit']);
 
 
 gulp.task('test-unit', function () {
-
-    return gulp.src('./test/**/*.js', {read: false})
-
+    return gulp.src('./test/unit/**/*.js', {read: false})
         .pipe(mocha({reporter: 'spec',
                     useColors: true}));
 });
@@ -105,7 +103,7 @@ gulp.task('build-browser',['init'], function() {
 
 // browserify min
 gulp.task('build-browser-min',['init'], function() {
-  var b = browserify({hasExports: true, standalone: "biojs-pcviz"});
+  var b = browserify({hasExports: true, standalone: "biojspcviz"});
   exposeBundles(b);
   return b.bundle()
     .pipe(source(outputFile + ".min.js"))
