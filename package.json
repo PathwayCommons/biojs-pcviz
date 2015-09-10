@@ -1,7 +1,7 @@
 {
   "name": "biojs-pcviz",
   "description": "BioJS wrapper for PCViz widget from Pathway Commons team",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "homepage": "https://github.com/PathwayCommons/biojs-pcviz",
   "author": {
     "name": "B. Arman Aksoy",

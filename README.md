@@ -50,7 +50,7 @@ var opts = {
   // Target HTML element
   el: document.createElement("div"),
   // Base URL for the target PCViz instance
-  baseurl: "http://www.pathwaycommons.org/pcviz/",
+  baseurl: "http://sanderlab.org/pcviz/",
   // Width of the iframe
   width: "100%",
   // Height of the iframe
