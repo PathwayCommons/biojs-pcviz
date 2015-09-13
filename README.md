@@ -1,7 +1,7 @@
 # biojs-pcviz
 
-[![NPM version](http://img.shields.io/npm/v/biojs-pcviz.svg)](https://www.npmjs.org/package/biojs-pcviz) 
-[![Build Status](https://secure.travis-ci.org/PathwayCommons/biojs-pcviz.png?branch=master)](http://travis-ci.org/PathwayCommons/biojs-pcviz) 
+[![NPM version](http://img.shields.io/npm/v/biojs-pcviz.svg)](https://www.npmjs.org/package/biojs-pcviz)
+[![Build Status](https://secure.travis-ci.org/PathwayCommons/biojs-pcviz.png?branch=master)](http://travis-ci.org/PathwayCommons/biojs-pcviz)
 
 > BioJS component for PCViz embedded widget
 
@@ -30,11 +30,10 @@ The following code sample shows how to use this component in a simple way:
 var biojspcviz = require('biojs-pcviz');
 
 // Create an instance of PCViz
-var pcviz = new biojspcviz();
+// and visualize the neighborhood of "BRCA1" gene in a div using this new instance
 var yourDiv = document.getElementById('yourDiv');
-
-// Visualize the neighborhood of "BRCA1" gene in a div using this new instance
-pcviz.neighborhood({ el: yourDiv, query: "BRCA1"}); 
+var pcviz = new biojspcviz({ el: yourDiv, query: "BRCA1"});
+pcviz.neighborhood();
 ```
 
 You can find more examples under the `examples` folder:
@@ -72,33 +71,25 @@ var opts = {
 }
 ```
 
-#### .neighboorhood(opts)
-
-**Parameter**: `opts`
-**Type**: `Object`
-**Example**: `{el: ..., query: ...}`
-
+#### .neighboorhood()
 Visualizes the neighborhood of all `query` genes.
 
 Example:
 ```javascript
 // Loads neighborhood of BRCA2
-pcviz.neighborhood({ el: thatEl, query: "BRCA2"});
+var pcviz = new biojspcviz({ el: thatEl, query: "BRCA2"});
+pcviz.neighborhood();
 ```
 
-#### .pathsbetween(opts)
-
-**Parameter**: `opts`
-**Type**: `Object`
-**Example**: `{el: ..., query: ...}`
-
+#### .pathsbetween()
 Queries the path between two or more genes.
 Returns a less dense network compared to `neighborhood`.
 
 Example:
 ```javascript
 // Loads paths between TP53,MDM2
-pcviz.pathsbetween({ el: thatEl, query: "TP53,MDM2"});
+var pcviz = new biojspcviz({ el: thatEl, query: "TP53,MDM2" });
+pcviz.pathsbetween();
 ```
 
 ## Contributing
@@ -108,7 +99,7 @@ Please submit all issues and pull requests to the [PathwayCommons/biojs-pcviz](h
 ## Support
 If you have any problem or suggestion please open an issue [here](https://github.com/PathwayCommons/biojs-pcviz/issues).
 
-## License 
+## License
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more details.

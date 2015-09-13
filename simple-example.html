@@ -1,17 +1,17 @@
 <html>
  <body>
-     <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
- 	<script type="text/javascript" src="biojspcviz.js"></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+ 	<script type="text/javascript" src="./build/biojspcviz.js"></script>
  	<script type="text/javascript">
 	 	$(document).ready(function() {
 			var biojspcviz = require('biojs-pcviz');
 
 			// Create an instance of PCViz
-			var pcviz = new biojspcviz();
-
+			var pcviz = new biojspcviz({ el: document.getElementById('testDiv'), query: "BRCA1"});
 			// Visualize the neighborhood of "BRCA1" gene in a div using this new instance
-			pcviz.neighborhood({ el: document.getElementById('testDiv'), query: "BRCA1"});
+			pcviz.neighborhood();
 			console.log("Done.");
+
 	 	});
  	</script>
 
